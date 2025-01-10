@@ -5,12 +5,10 @@
     0 0 82px rgb(0, 214, 207), 0 0 92px rgb(0, 214, 207),
     0 0 102px rgb(0, 214, 207), 0 0 151px rgb(0, 214, 207);
 }
-.home{
-  /* margin-top: ; */
-}
 body {
   padding: 0;
   margin: 0;
+  
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #DDD;
 }
@@ -79,6 +77,6 @@ body {
 
 @media(max-width:765px){
   .collapesed-navbar{
-    background-color: rgba(5, 12, 49, 0.555);
+    background-color: rgb(5, 12, 49);
   }
 }
