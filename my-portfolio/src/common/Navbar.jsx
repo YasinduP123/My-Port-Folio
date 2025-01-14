@@ -7,6 +7,7 @@ import ProjectCard from "../project-card/ProjectCard";
 import { Link } from "react-scroll";
 import "../common/nav-bar.css";
 import Intro from "../Intro/Intro";
+import About from "../about/About";
 
 function Navbar() {
   return (
@@ -15,17 +16,18 @@ function Navbar() {
         style={{
           position: "fixed",
           width: "100%",
-          zIndex: 10,
           
         }}
-        className="marginBottom: 120px"
+        className="marginBottom: 120px z-10"
       >
         <nav  style={{ fontFamily: '"Alfa Slab One", sans-serif', backgroundColor:"black" }}>
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
             <a className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src={ypc} className="h-8" alt="Logo" />
-              <span className="navbar-title self-center font-semibold whitespace-nowrap dark:text-white">
-                Yasidu Pathiraja
+              <span className="navbar-title text-flick self-center font-semibold whitespace-nowrap dark:text-white">
+              <span className="glowing-txt">
+              Yasidu<span className="faulty-letter"> Pathiraja</span>
+              </span>
               </span>
             </a>
             <button
@@ -112,23 +114,21 @@ function Navbar() {
           </div>
         </nav>
       </div>
-      
-      {/* Add padding to avoid overlap */}
       <div className="mx-10">
-        <div id="home" className="pt-0">
+        <div id="home" className="pt-16">
             <Intro />
         </div>
-        <div id="about" className="pt-16">
-          <ProjectCard />
+        <div id="about" className=" pt-16">
+          <About className="m-auto" />
         </div>
         <div id="services" className="pt-16">
-          <ProjectCard />
+
         </div>
         <div id="pricing" className="pt-16">
-          <ProjectCard />
+          
         </div>
         <div id="contact" className="pt-16">
-          <ProjectCard /> 
+           
         </div>
       </div>
     </>
