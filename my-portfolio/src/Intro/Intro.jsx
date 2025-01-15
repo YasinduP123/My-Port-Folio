@@ -2,56 +2,42 @@ import React from "react";
 import "./intro.css";
 import "react-google-fonts";
 import ypc from "../assets/file (1).png";
-import myCv from "../assets/Yasidu_Udayanga.pdf";
-import { useNavigate } from "react-router-dom";
-import { FaDownload, FaGithub, FaLinkedinIn } from "react-icons/fa"; // Import the download icon
+import { FaGithub, FaLinkedinIn } from "react-icons/fa"; // Import the download icon
 import ButtonDowload from "../custom-component/ButtonDowload";
 
 const Intro = () => {
-  gsap.to(".fade-animate", {
-    duration: 1,
-    rotation: 360,
-    opacity: 1,
-    delay: 0.5,
-    stagger: 0.2,
-    ease: "sine.out",
-    force3D: true,
-  });
 
-  document.querySelectorAll(".fade-animate").forEach(function (box) {
-    box.addEventListener("click", function () {
-      gsap.to("box", {
-        duration: 0.5,
-        opacity: 0,
-        y: -100,
-        stagger: 0.1,
-        ease: "back.in",
-      });
-    });
-  });
   return (
     <>
       <div className="intro-page grid h-full intr-h lg:grid-cols-2 sm:grid-cols-1">
         <div className="m-auto flex items-center justify-center">
-          <img
-            className="my-pic rounded-full lg:w-96 lg:h-96"
-            src={ypc}
-            alt="My PIC"
-          />
+          <div data-aos="fade-right">
+            <img
+              className="my-pic rounded-full lg:w-96 lg:h-96"
+              src={ypc}
+              alt="My PIC"
+            />
+          </div>
         </div>
 
         <div className="m-auto flex items-center justify-center">
-          <div className="block max-w-xl m-auto p-20 lg:mt-20 mt-2 rounded-lg shadow">
+          <div className="block max-w-xl m-auto lg:mt-20 mt-2 rounded-lg shadow">
             <h5
               style={{
                 fontFamily: "Bebas Neue, monospace",
                 fontWeight: "bolder",
                 fontSize: "40px",
               }}
-              className="mb-2 neon tracking-tight text-gray-900 text-center text-flick dark:text-white"
-            ><span>
-              <span className="glowing-txt">Yasidu<span className="faulty-letter"> Uda</span>yanga Pathiraja</span>
-            </span>
+              className="mb-2 neon tracking-tight pl-20 pr-20 text-gray-900 text-center text-flick dark:text-white"
+            >
+              <div data-aos="zoom-in-up">
+                <span>
+                  <span className="glowing-txt">
+                    Yasidu<span className="faulty-letter"> Uda</span>yanga
+                    Pathiraja
+                  </span>
+                </span>
+              </div>
             </h5>
             <p
               style={{
